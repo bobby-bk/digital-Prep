@@ -68,10 +68,10 @@
             $('.back-to-top').fadeOut('slow');
         }
     });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
+    // $('.back-to-top').click(function () {
+    //     $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+    //     return false;
+    // });
 
 
     // Testimonials carousel
@@ -123,4 +123,17 @@
     });
     
 })(jQuery);
+
+
+$(document).ready(function(){
+    $("#openPopupBtn").click(function(){
+      $("#contactPopup").fadeIn();
+      $("#popupOverlay").fadeIn();
+    });
+
+    $("#closePopupBtn, #popupOverlay").click(function(){
+      $("#contactPopup").fadeOut();
+      $("#popupOverlay").fadeOut();
+    });
+  });
 
